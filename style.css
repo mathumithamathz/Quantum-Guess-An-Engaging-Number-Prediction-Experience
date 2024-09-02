@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  color: #eee;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 10px;
+}
+
+header {
+  margin-bottom: 20px;
+  width: 100%; /* Ensure header takes full width */
+}
+
+h1 {
+  font-size: 40px;
+  color: #ff6f61;
+  margin-bottom: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: row; /* Layout rows for left and right */
+  align-items: flex-start; /* Align items to the top */
+  background-color: #444;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+  max-width: 1100px;
+  width: 90%;
+  flex-wrap: wrap; /* Allow wrapping on narrow screens */
+  gap: 16px; /* Add gap between columns */
+}
+
+.left,
+.right {
+  flex: 1; /* Flex grow to fit available space */
+  max-width: 52rem; /* Constrain to max-width */
+}
+
+.number {
+  background: #ff6f61;
+  color: #fff;
+  width: 150px;
+  font-size: 60px;
+  padding: 15px 0;
+  margin: 0 auto 20px auto;
+  border-radius: 2.5px;
+  text-align: center;
+}
+
+.between,
+.again {
+  font-size: 16px;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.again {
+  color: #ff6f61;
+  cursor: pointer;
+}
+
+.guess {
+  background: none;
+  border: 2px solid #ff6f61;
+  color: inherit;
+  font-size: 30px;
+  padding: 20px 0;
+  width: 80%;
+  text-align: center;
+  margin-bottom: 30px;
+  border-radius: 2.5px;
+}
+
+.btn {
+  border: none;
+  background-color: #ff6f61;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 30px;
+  cursor: pointer;
+  border-radius: 2.5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #e65d55;
+}
+
+.message {
+  font-size: 22px;
+  margin: 20px 0 50px 0;
+}
+
+.label-score,
+.label-highscore {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.score,
+.highscore {
+  font-size: 20px;
+  color: #ff6f61;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+
+  main {
+    flex-direction: column; /* Stack columns vertically on narrow screens */
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .left,
+  .right {
+    max-width: 100%; /* Allow full width on small screens */
+    margin: 10px 0; /* Adjust margin for vertical stacking */
+  }
+
+  .number {
+    font-size: 40px;
+    padding: 10px 0;
+  }
+
+  .guess {
+    font-size: 24px;
+    padding: 15px 0;
+    width: 30%;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .btn {
+    font-size: 18px;
+    padding: 15px 20px;
+  }
+
+  .message {
+    font-size: 20px;
+    margin: 15px 0 35px 0;
+  }
+
+  .label-score,
+  .label-highscore {
+    font-size: 16px;
+    margin-bottom: 15px;
+  }
+
+  .score,
+  .highscore {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .number {
+    font-size: 30px;
+    padding: 10px 0;
+  }
+
+  .guess {
+    font-size: 20px;
+    padding: 10px 0;
+    display: block;
+    margin: 20px auto;
+  }
+
+  .btn {
+    font-size: 16px;
+    padding: 15px 15px;
+  }
+
+  .message {
+    font-size: 16px;
+    margin: 15px 0 35px 0;
+  }
+
+  .label-score,
+  .label-highscore {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+
+  .score,
+  .highscore {
+    font-size: 16px;
+  }
+}
